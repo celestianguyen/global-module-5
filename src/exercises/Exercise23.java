@@ -1,6 +1,6 @@
 package exercises;
 
-public class Exercise22 {
+public class Exercise23 {
     public static void main(String[] args) {
         /*
         Find Numbers That Satisfy a Given Condition
