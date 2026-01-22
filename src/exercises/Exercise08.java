@@ -1,39 +1,35 @@
 package exercises;
+
 import java.util.Scanner;
 
+/*
+Print the Sequence 1, 3, 7, 15, 31, … n
+Problem
+Print the number sequence: 1, 3, 7, 15, 31, … n. where n is a number entered from the keyboard.
+
+--
+0x2 + 1 = 1
+1x2 + 1 = 3
+3x2 + 1 = 7
+
+
+ */
 public class Exercise08 {
     public static void main(String[] args) {
-        /*
-        Find the Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of Two Positive Integers
-        Problem
-        Enter two positive integers a and b.
-        Then print the Greatest Common Divisor (GCD) and the Least Common Multiple (LCM) of these two numbers.
-         */
-
         Scanner scanner = new Scanner(System.in);
+        int n;
+        do {
+            System.out.print("Please enter n: ");
+            n = scanner.nextInt();
+        } while (n < 0);
+        int res = 0;
 
-        System.out.print("Please enter a: ");
-        int a = scanner.nextInt();
-        System.out.print("Please enter b: ");
-        int b = scanner.nextInt();
-        if (a < 0 || b < 0){
-            System.out.println("Invalid input! please enter a positive integer!");
-            return;
-        }
-
-        for (int i = Math.min(a,b); i >= 1; i--){
-            if (a % i == 0 && b % i == 0){
-                System.out.println("gcd = " + i);
+        while (true){
+            res = 2 * res + 1;
+            if (res > n){
                 break;
             }
+            System.out.print(res + " ");
         }
-
-        for (int j = Math.max(a,b); j <= a*b; j++){
-            if (j % a == 0 && j % b == 0){
-                System.out.println("lcm = " + j);
-                break;
-            }
-        }
-        scanner.close();
     }
 }
