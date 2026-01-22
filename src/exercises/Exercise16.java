@@ -94,6 +94,89 @@ public class Exercise16 {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println("Shape D: ");
+        for (int i = 1; i <= n; i++){
+            for (int j = 1; j < i; j++){
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= n - i + 1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        /*
+        Shape E
+        *****
+        *  *
+        * *
+        **
+        *
+         */
+        System.out.println();
+        System.out.println("Shape E: ");
+        for(int i = 1; i <= n; i ++){
+            for (int j = 1; j <= (n - i + 1); j++){
+                if (i == 1 || j == 1){
+                    System.out.print("*");
+                } else if (j == (n - i + 1)){
+                    System.out.println("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+
+        /*
+        Shape F
+           *
+          ***
+         *****
+        *******
+        i = 1: 3 " " 1*
+        i = 2: 2 " " 3*
+        i = 3: 1 " " 5*
+        i = 4: 0 " " 7*
+
+        The number of * characters in each row is (2 × row − 1).
+         */
+        System.out.println();
+        System.out.println("Shape F: ");
+        for (int i = 1; i <= n; i++){
+            for (int j = 1; j <= (n-i); j++){
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        /*
+        Shape G
+        *******
+         *****
+          ***
+           *
+         */
+        System.out.println();
+        System.out.println("Shape G: ");
+        for(int i = n; i >= 1; i --){
+            for (int j = 1; j <= (n - i); j++){
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2*i -1; k++){
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+
 
 
         scanner.close();
